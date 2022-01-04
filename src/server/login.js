@@ -1,7 +1,6 @@
 import {connection} from '../../db'
 
 export default function login(email, password, callback) {
-  const bcrypt = require('bcrypt');
 
   const query = 'SELECT id, email, password FROM users WHERE email = ?';
 

@@ -5,7 +5,7 @@ export let connection = mysql.createConnection({
     user:'root',
     password:'password',
     database:'adoption_db',
-    socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock',
+    timezone: 'utc',
     port:'3306'
 })
 
