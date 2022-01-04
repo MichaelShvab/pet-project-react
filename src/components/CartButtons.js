@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import { usePetsContext } from '../context/pets_context'
 import { useCartContext } from '../context/cart_context'
 import { useUserContext } from '../context/user_context'
+import login from '../server/login'
 
 const CartButtons = () => {
   const { closeSidebar } = usePetsContext()
@@ -27,7 +28,7 @@ const CartButtons = () => {
     })}}>
       Logout <FaUserMinus />
     </button> : 
-    <button type='button' className='auth-btn' onClick={loginWithRedirect}>
+    <button type='button' className='auth-btn' onClick={() => login()}>
       Login <FaUserPlus />
     </button>}
 

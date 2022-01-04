@@ -4,22 +4,6 @@ import { Navbar, Sidebar, Footer } from './components'
 import { Home, About, SinglePet, Cart, Checkout, Error, Pets, PrivateRoute, AuthWrapper  } from './pages'
 
 function App() {
-const callBackendAPI = async () => {
-  const response = await fetch('/', {
-      headers : { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-       }});
-  const body = await response;
-  if (response.status !== 200) {
-    throw Error(body.message) 
-  }
-  return body
-};
-
-useEffect(() => {
-  callBackendAPI()
-}, [])
 
   return (
     <AuthWrapper>
